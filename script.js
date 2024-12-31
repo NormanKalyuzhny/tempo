@@ -78,6 +78,7 @@ hideUiBtn.addEventListener('click', ()=>{
     document.querySelector('.ng-text').style.opacity = '0'
     document.querySelector('.year').style.opacity = '0'
     document.querySelector('.bg-gradient').style.opacity = '0'
+    document.getElementById('myName').classList.add('animate');
     
   } else {
     isBtnClicked = false
@@ -87,4 +88,3 @@ hideUiBtn.addEventListener('click', ()=>{
     document.querySelector('.bg-gradient').style.opacity = '1'
   }
 })
-
