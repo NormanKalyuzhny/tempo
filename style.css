@@ -115,11 +115,21 @@ li{
   background-color: rgba(52, 155, 32, 0.705);
 }
 
-iframe{
+#myName{
+  position: absolute;
   display: flex;
-  background: darkblue;
-  width: 100%;
-  height: 100%;
+  align-items: center;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+  background-color: rgba(18, 69, 180, 0.918);
+  color: white;
+  height: 30px;
+  right: 55px;
+  bottom: 0;
+  margin: 1rem;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .ng-text li:nth-child(1){
@@ -146,7 +156,6 @@ iframe{
 .ng-text li:nth-child(8){
   animation: slide 2s forwards 0.8s;
 }
-
 
 @keyframes draw {
   to {
@@ -175,6 +184,25 @@ iframe{
   100%{
     transform: translateY(-150px);
   }
+}
+
+@keyframes myName {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1; /* Продолжаем быть видимым до 60% */
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate {
+  animation: myName 3s ease-in-out forwards;
 }
 
 @media (max-width: 650px) {
