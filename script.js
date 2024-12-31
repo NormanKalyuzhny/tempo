@@ -12,7 +12,7 @@ snowflakeSVG.src = 'snowflake-svgrepo.svg';
 
 snowflakeSVG.onload = () => {
   // snowflakes count
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 300; i++) {
       snowflakes.push(createSnowflake());
   }
   animateSnowfall();
@@ -66,3 +66,25 @@ window.addEventListener('resize', () => {
       snowflakes.push(createSnowflake());
   }
 });
+
+const hideUiBtn = document.getElementById('hideUiBtn')
+
+let isBtnClicked = false
+
+hideUiBtn.addEventListener('click', ()=>{
+  if (!isBtnClicked){
+    isBtnClicked = true
+    document.querySelector('.svg-textHead').style.opacity = '0'
+    document.querySelector('.ng-text').style.opacity = '0'
+    document.querySelector('.year').style.opacity = '0'
+    document.querySelector('.bg-gradient').style.opacity = '0'
+    
+  } else {
+    isBtnClicked = false
+    document.querySelector('.svg-textHead').style.opacity = '1'
+    document.querySelector('.ng-text').style.opacity = '1'
+    document.querySelector('.year').style.opacity = '1'
+    document.querySelector('.bg-gradient').style.opacity = '1'
+  }
+})
+

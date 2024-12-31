@@ -13,6 +13,11 @@ body,html{
 li{
   list-style: none;
   height: auto;
+  text-align: center;
+  padding: 0 1rem;
+  margin-bottom: 0.3rem;
+
+  text-shadow: 2px 2px 5px rgba(10, 17, 77, 0.582);
 }
 
 .wrapper {
@@ -22,9 +27,16 @@ li{
   align-items: center;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0, rgb(196, 229, 250),rgb(6, 127, 240));
+  background: linear-gradient(0, rgb(10, 89, 138),rgb(5, 18, 56));
 }
-
+.bg-gradient{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0, rgb(196, 229, 250),rgb(6, 127, 240));
+  opacity: 1;
+  transition: opacity 60s ease;
+}
 #canvas{
   position: absolute;
   top: 0;
@@ -48,6 +60,8 @@ li{
 .svg-textHead{
   width: 600px;
   height: fit-content;
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 #svgGroup .svg-path{
@@ -63,10 +77,12 @@ li{
   position: relative;
   font-size: 1.5rem;
   color: white;
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 .ng-text li{
-  transform: translateX(-1000px);
+  transform: translateX(-9999px);
 }
 
 .year{
@@ -75,6 +91,35 @@ li{
   font-size: 6rem;
   color: rgb(75, 163, 235);
   animation: slideDown 1s forwards 3s ease;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.hide-ui-btn{
+  position: absolute;
+  border: none;
+  width: 50px;
+  height: 30px;
+  border-radius: 0.3rem;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+  background-color: rgba(52, 111, 223, 0.705);
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.hide-ui-btn:hover{
+  background-color: rgba(52, 155, 32, 0.705);
+}
+
+iframe{
+  display: flex;
+  background: darkblue;
+  width: 100%;
+  height: 100%;
 }
 
 .ng-text li:nth-child(1){
