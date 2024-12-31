@@ -1,0 +1,133 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+li{
+  list-style: none;
+  height: auto;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0, rgb(196, 229, 250),rgb(6, 127, 240));
+}
+
+#canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.container-svg{
+  position: relative;
+  top: 150px;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.svg-textHead{
+  width: 600px;
+  height: fit-content;
+}
+
+#svgGroup .svg-path{
+  position: relative;
+  stroke-dasharray: 380;  
+  stroke-dashoffset: 380;
+  animation: draw 3s forwards ease, fill 1s ease 2s forwards;
+  fill: transparent;
+}
+
+.ng-text{
+  top: 200px;
+  position: relative;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.ng-text li{
+  transform: translateX(-1000px);
+}
+
+.year{
+  position: absolute;
+  bottom: -100px;
+  font-size: 6rem;
+  color: rgb(75, 163, 235);
+  animation: slideDown 1s forwards 3s ease;
+}
+
+.ng-text li:nth-child(1){
+  animation: slide 2s forwards;
+}
+.ng-text li:nth-child(2){
+  animation: slide 2s forwards 0.2s;
+}
+.ng-text li:nth-child(3){
+  animation: slide 2s forwards 0.3s;
+}
+.ng-text li:nth-child(4){
+  animation: slide 2s forwards 0.4s;
+}
+.ng-text li:nth-child(5){
+  animation: slide 2s forwards 0.5s;
+}
+.ng-text li:nth-child(6){
+  animation: slide 2s forwards 0.6s;
+}
+.ng-text li:nth-child(7){
+  animation: slide 2s forwards 0.7s;
+}
+.ng-text li:nth-child(8){
+  animation: slide 2s forwards 0.8s;
+}
+
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  to {
+    fill: white;
+  }
+}
+
+@keyframes slide {
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-170px);
+  }
+  100%{
+    transform: translateY(-150px);
+  }
+}
